@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,41 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Belle N. Nuñal | Recruitment & Virtual Operations</title>
   <meta name="description" content="Professional portfolio of Belle N. Nuñal, Recruitment and Virtual Operations Specialist.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --deep costal blue: #344A62;
-      --rose: #E5AEB2;
-      --sky ble: #A9C7D8;
-      --dusty rose: #E5AEB2;
-      --text: #25334A;
-      --muted: #66758A;
-      --wwarm cream: #F5F0EA;
+      --navy: #344A62;
+      --blue: #52758A;
+      --rose: #C99A9B;
+      --cream: #F7F4EF;
+      --light: #F3F6F7;
+      --white: #FFFFFF;
+      --text: #263746;
+      --muted: #697984;
+      --line: #DFE6E8;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: "Inter", Arial, Helvetica, sans-serif;
       color: var(--text);
       background: var(--white);
-      line-height: 1.7;
+      font-size: 16px;
+      line-height: 1.75;
     }
 
-    a { text-decoration: none; color: inherit; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
     .container {
-      width: min(1100px, 90%);
-      margin: auto;
+      width: min(1050px, 90%);
+      margin: 0 auto;
     }
 
     header {
-      background: white;
-      border-bottom: 1px solid #E8EDF5;
       position: sticky;
       top: 0;
       z-index: 10;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(8px);
     }
 
     nav {
@@ -52,91 +74,112 @@
     }
 
     .logo {
-      font-size: 21px;
-      font-weight: 800;
+      font-family: "Source Serif 4", Georgia, serif;
       color: var(--navy);
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0.01em;
     }
-
-    .logo span { color: var(--orange); }
 
     .nav-links {
       display: flex;
+      align-items: center;
       gap: 25px;
       font-size: 14px;
       font-weight: 600;
+      color: var(--text);
     }
 
-    .nav-links a:hover { color: var(--blue); }
+    .nav-links a {
+      padding: 8px 0;
+      border-bottom: 2px solid transparent;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+      border-bottom-color: var(--rose);
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--rose);
+      outline-offset: 4px;
+    }
 
     .hero {
-      background: linear-gradient(125deg, #17365D, #205ED7);
-      color: white;
-      padding: 105px 0 95px;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      width: 360px;
-      height: 360px;
-      border: 65px solid rgba(255,255,255,.07);
-      border-radius: 50%;
-      right: -100px;
-      top: -110px;
+      background: var(--navy);
+      color: var(--white);
+      padding: 88px 0;
     }
 
     .eyebrow {
-      color: #FFD08C;
-      text-transform: uppercase;
-      letter-spacing: 2px;
+      margin-bottom: 18px;
+      color: #E7C4AF;
       font-size: 12px;
-      font-weight: 800;
-      margin-bottom: 20px;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
     }
 
     .hero h1 {
-      font-size: clamp(38px, 6vw, 64px);
-      line-height: 1.12;
-      max-width: 800px;
-      margin-bottom: 20px;
+      max-width: 760px;
+      margin-bottom: 22px;
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: clamp(42px, 6vw, 66px);
+      line-height: 1.08;
+      letter-spacing: -0.025em;
     }
 
-    .hero h1 span { color: #FFB454; }
+    .hero h1 span {
+      color: #E7C4AF;
+    }
 
     .hero p {
-      color: #E0EAF9;
       max-width: 650px;
-      font-size: 17px;
       margin-bottom: 30px;
+      color: #E4EAF0;
+      font-size: 17px;
     }
 
     .buttons {
       display: flex;
       flex-wrap: wrap;
-      gap: 13px;
+      gap: 12px;
     }
 
     .btn {
       display: inline-block;
       padding: 12px 22px;
       border-radius: 7px;
-      font-weight: 700;
       font-size: 14px;
+      font-weight: 700;
+      transition: 0.2s ease;
     }
 
-    .btn-orange {
-      background: var(--orange);
+    .btn-primary {
+      background: #E7C4AF;
       color: var(--navy);
+      border: 1px solid #E7C4AF;
+    }
+
+    .btn-primary:hover {
+      background: var(--white);
+      border-color: var(--white);
     }
 
     .btn-outline {
-      border: 1px solid white;
-      color: white;
+      color: var(--white);
+      border: 1px solid rgba(255, 255, 255, 0.65);
     }
 
-    section { padding: 80px 0; }
+    .btn-outline:hover {
+      background: var(--white);
+      color: var(--navy);
+    }
+
+    section {
+      padding: 80px 0;
+    }
 
     .section-heading {
       margin-bottom: 35px;
@@ -144,83 +187,104 @@
 
     .section-heading small {
       color: var(--blue);
-      font-weight: 800;
+      font-size: 12px;
+      font-weight: 700;
       letter-spacing: 1.5px;
       text-transform: uppercase;
     }
 
     .section-heading h2 {
+      margin: 7px 0 10px;
       color: var(--navy);
-      font-size: clamp(27px, 4vw, 36px);
-      margin: 7px 0;
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: clamp(30px, 4vw, 42px);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
     }
 
     .section-heading p {
-      color: var(--muted);
       max-width: 650px;
+      color: var(--muted);
     }
 
     .about-grid {
       display: grid;
       grid-template-columns: 1.4fr 1fr;
-      gap: 40px;
       align-items: center;
+      gap: 50px;
     }
 
-    .about-copy p { margin-bottom: 15px; }
+    .about-copy p {
+      margin-bottom: 15px;
+    }
 
     .experience-card {
-      background: var(--light);
-      border-radius: 16px;
       padding: 30px;
-      border-left: 5px solid var(--orange);
+      background: var(--cream);
+      border-left: 4px solid var(--rose);
+      border-radius: 10px;
     }
 
     .experience-card strong {
-      font-size: 44px;
-      color: var(--blue);
       display: block;
+      color: var(--navy);
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: 40px;
       line-height: 1.2;
     }
 
-    .experience-card span { color: var(--muted); }
+    .experience-card span {
+      color: var(--muted);
+    }
 
-    .services { background: var(--light); }
+    .experience-card hr {
+      margin: 20px 0;
+      border: 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .services,
+    .skills {
+      background: var(--light);
+    }
 
     .cards {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
+      gap: 18px;
     }
 
     .card {
-      background: white;
-      border: 1px solid #E7ECF4;
-      border-radius: 14px;
-      padding: 27px;
-      transition: .2s ease;
+      padding: 28px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      transition: 0.2s ease;
     }
 
     .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 28px rgba(23,54,93,.09);
+      border-color: #C8D3D7;
+      transform: translateY(-3px);
     }
 
     .card-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 12px;
-      background: #EAF1FF;
+      width: 44px;
+      height: 44px;
+      margin-bottom: 16px;
       display: grid;
       place-items: center;
-      font-size: 23px;
-      margin-bottom: 17px;
+      background: var(--cream);
+      border: 1px solid #E8DFD5;
+      border-radius: 8px;
+      font-size: 20px;
     }
 
     .card h3 {
-      color: var(--navy);
       margin-bottom: 8px;
-      font-size: 19px;
+      color: var(--navy);
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: 20px;
+      line-height: 1.3;
     }
 
     .card p {
@@ -235,51 +299,56 @@
     }
 
     .project {
-      border: 1px solid #E5EAF2;
-      border-radius: 14px;
       overflow: hidden;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 10px;
     }
 
     .project-top {
       min-height: 155px;
-      background: linear-gradient(135deg, #205ED7, #17365D);
-      color: white;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 46px;
+      background: var(--cream);
+      color: var(--navy);
+      border-bottom: 1px solid var(--line);
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: 32px;
+      font-weight: 700;
     }
 
     .project:nth-child(2) .project-top {
-      background: linear-gradient(135deg, #FE8E0A, #F5B64F);
+      background: #EEF3F5;
     }
 
-    .project-content { padding: 23px; }
+    .project-content {
+      padding: 23px;
+    }
 
     .project-content h3 {
-      color: var(--navy);
       margin-bottom: 9px;
+      color: var(--navy);
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: 20px;
     }
 
     .project-content p {
+      margin-bottom: 15px;
       color: var(--muted);
       font-size: 14px;
-      margin-bottom: 15px;
     }
 
     .tag {
       display: inline-block;
-      background: #EDF3FF;
-      color: var(--blue);
-      border-radius: 30px;
+      margin: 3px 3px 0 0;
       padding: 5px 10px;
+      background: var(--light);
+      color: var(--blue);
+      border: 1px solid var(--line);
+      border-radius: 30px;
       font-size: 11px;
       font-weight: 700;
-      margin: 3px 3px 0 0;
-    }
-
-    .skills {
-      background: var(--light);
     }
 
     .skill-list {
@@ -289,238 +358,305 @@
     }
 
     .skill {
-      background: white;
-      border: 1px solid #E2E9F3;
-      border-radius: 8px;
-      padding: 10px 16px;
-      font-weight: 600;
+      padding: 9px 16px;
+      background: var(--white);
       color: var(--navy);
+      border: 1px solid var(--line);
+      border-radius: 7px;
       font-size: 14px;
+      font-weight: 600;
     }
 
     .contact {
       background: var(--navy);
-      color: white;
+      color: var(--white);
       text-align: center;
     }
 
     .contact h2 {
-      font-size: clamp(28px, 4vw, 40px);
       margin-bottom: 12px;
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: clamp(30px, 4vw, 42px);
+      line-height: 1.15;
     }
 
     .contact p {
-      color: #D5E1F1;
       max-width: 600px;
       margin: 0 auto 25px;
+      color: #DDE6EC;
     }
 
     footer {
-      background: #102947;
-      color: #D5E1F1;
-      text-align: center;
       padding: 22px;
+      background: #263949;
+      color: #DDE6EC;
+      text-align: center;
       font-size: 13px;
     }
 
     @media (max-width: 700px) {
-      .nav-links { gap: 12px; font-size: 12px; }
-      .logo { font-size: 17px; }
-      .hero { padding: 75px 0; }
-      .about-grid, .cards, .projects-grid {
+      .nav-links {
+        gap: 12px;
+        font-size: 12px;
+      }
+
+      .logo {
+        font-size: 17px;
+      }
+
+      .hero {
+        padding: 70px 0;
+      }
+
+      .about-grid,
+      .cards,
+      .projects-grid {
         grid-template-columns: 1fr;
       }
-      section { padding: 60px 0; }
+
+      section {
+        padding: 60px 0;
+      }
     }
 
     @media (max-width: 420px) {
-      nav { align-items: flex-start; flex-direction: column; padding: 15px 0; }
-      .nav-links { flex-wrap: wrap; }
+      nav {
+        min-height: auto;
+        padding: 15px 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        width: 100%;
+        flex-wrap: wrap;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .card,
+      .btn {
+        transition: none;
+      }
     }
   </style>
 </head>
 
 <body>
-
-<header>
-  <div class="container">
-    <nav>
-      <a class="logo" href="#">BELLE N. <span>NUÑAL</span></a>
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
-  </div>
-</header>
-
-<main>
-  <section class="hero">
+  <header>
     <div class="container">
-      <div class="eyebrow">Recruitment · Virtual Assistance · Operations</div>
-      <h1>Hi, I'm Belle. I help businesses build <span>better operations.</span></h1>
-      <p>
-        Recruitment & Virtual Operations Specialist with experience in
-        talent acquisition, administrative support, recruitment processes,
-        and remote business operations.
-      </p>
-      <div class="buttons">
-        <a class="btn btn-orange" href="#projects">Explore My Work →</a>
-        <a class="btn btn-outline" href="#contact">Let's Connect</a>
-      </div>
+      <nav aria-label="Main navigation">
+        <a class="logo" href="#" aria-label="Belle N. Nuñal home">
+          BELLE N. NUÑAL
+        </a>
+
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
     </div>
-  </section>
+  </header>
 
-  <section id="about">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-copy">
-          <div class="section-heading">
-            <small>Get to know me</small>
-            <h2>Experience meets practical solutions.</h2>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="eyebrow">Recruitment · Virtual Assistance · Operations</div>
+        <h1>Recruitment expertise and <span>practical operations support.</span></h1>
+        <p>
+          Recruitment & Virtual Operations Specialist with experience in talent acquisition,
+          administrative support, recruitment processes, and remote business operations.
+        </p>
+
+        <div class="buttons">
+          <a class="btn btn-primary" href="#projects">Explore My Work →</a>
+          <a class="btn btn-outline" href="#contact">Let's Connect</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-copy">
+            <div class="section-heading">
+              <small>Get to know me</small>
+              <h2>Experience meets practical solutions.</h2>
+            </div>
+
+            <p>
+              I am a Recruitment & Virtual Operations Specialist with experience supporting
+              recruitment teams, overseas hiring, administrative functions, and remote operations.
+            </p>
+            <p>
+              My work includes candidate sourcing and screening, recruitment coordination,
+              documentation, database management, reporting, and process improvement.
+            </p>
+            <p>
+              I also contribute recruitment industry knowledge and process documentation to
+              recruitment application projects, working alongside developers to translate
+              recruitment needs into practical workflows.
+            </p>
           </div>
+
+          <aside class="experience-card" aria-label="Professional experience summary">
+            <strong>10+</strong>
+            <span>Years of professional experience</span>
+
+            <hr>
+
+            <strong style="font-size: 24px;">People + Process</strong>
+            <span>My approach to recruitment and operations support</span>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <small>What I can do</small>
+          <h2>How I Support Your Team</h2>
           <p>
-            I am a Recruitment & Virtual Operations Specialist with
-            experience supporting recruitment teams, overseas hiring,
-            administrative functions, and remote operations.
+            Practical support for businesses, recruitment teams, and remote operations.
           </p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">👥</div>
+            <h3>Recruitment & Talent Acquisition</h3>
+            <p>
+              Candidate sourcing, screening, interview coordination, hiring documentation,
+              and onboarding support.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">📋</div>
+            <h3>Virtual Assistance & Administration</h3>
+            <p>
+              Administrative coordination, data management, reporting, records organization,
+              and daily operational support.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">⚙️</div>
+            <h3>Recruitment Process Support</h3>
+            <p>
+              Recruitment workflow documentation, process mapping, system requirements input,
+              and coordination with development teams.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">📣</div>
+            <h3>Social Media Management</h3>
+            <p>
+              Content preparation, social media posting, campaign coordination, inquiry handling,
+              and performance monitoring.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="section-heading">
+          <small>Selected work</small>
+          <h2>Featured Portfolio Projects</h2>
           <p>
-            My work includes candidate sourcing and screening, recruitment
-            coordination, documentation, database management, reporting,
-            and process improvement.
+            Practical examples demonstrating my skills, tools, and working approach.
           </p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project">
+            <div class="project-top">Candidate Tracker</div>
+            <div class="project-content">
+              <h3>Healthcare Recruitment Candidate Tracker</h3>
+              <p>
+                A sample recruitment tracking system for organizing candidate records,
+                monitoring hiring stages, and displaying recruitment pipeline metrics.
+              </p>
+              <span class="tag">Google Sheets</span>
+              <span class="tag">Dashboard</span>
+              <span class="tag">Recruitment</span>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-top">Process Documentation</div>
+            <div class="project-content">
+              <h3>Recruitment Process Documentation</h3>
+              <p>
+                A portfolio case study showing how recruitment activities can be organized
+                into clear workflows, process steps, and operational documentation.
+              </p>
+              <span class="tag">Process Mapping</span>
+              <span class="tag">Documentation</span>
+              <span class="tag">Operations</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills" id="skills">
+      <div class="container">
+        <div class="section-heading">
+          <small>Tools & technologies</small>
+          <h2>Tools I Work With</h2>
           <p>
-            I also contributed recruitment industry knowledge and process
-            documentation to a recruitment application project, working
-            alongside developers to help translate recruitment needs into
-            practical workflows.
+            Technology that helps me organize work, communicate, and manage recruitment operations.
           </p>
         </div>
-        <div class="experience-card">
-          <strong>10+</strong>
-          <span>Years of professional experience</span>
-          <hr style="border:0;border-top:1px solid #DCE5F1;margin:20px 0">
-          <strong>People + Process</strong>
-          <span>My approach to recruitment and operations support</span>
+
+        <div class="skill-list">
+          <span class="skill">Google Workspace</span>
+          <span class="skill">Google Sheets</span>
+          <span class="skill">Zoho CRM</span>
+          <span class="skill">JotForm</span>
+          <span class="skill">Slack</span>
+          <span class="skill">ClickUp</span>
+          <span class="skill">Canva</span>
+          <span class="skill">Figma</span>
+          <span class="skill">Adobe Tools</span>
+          <span class="skill">ChatGPT</span>
+          <span class="skill">Claude</span>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="services" id="services">
-    <div class="container">
-      <div class="section-heading">
-        <small>What I can do</small>
-        <h2>Services & Expertise</h2>
-        <p>Practical support for businesses, recruitment teams, and remote operations.</p>
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="eyebrow">Have a project in mind?</div>
+        <h2>Let's work together.</h2>
+        <p>
+          Looking for recruitment, virtual assistance, or operations support?
+          I would be happy to connect with you.
+        </p>
+
+        <a class="btn btn-primary"
+           href="https://github.com/bellenoradanunal"
+           target="_blank"
+           rel="noopener noreferrer">
+          Connect on GitHub →
+        </a>
       </div>
+    </section>
+  </main>
 
-      <div class="cards">
-        <div class="card">
-          <div class="card-icon">👥</div>
-          <h3>Recruitment & Talent Acquisition</h3>
-          <p>Candidate sourcing, screening, interview coordination, hiring documentation, and onboarding support.</p>
-        </div>
-
-        <div class="card">
-          <div class="card-icon">📋</div>
-          <h3>Virtual Assistance & Administration</h3>
-          <p>Administrative coordination, data management, reporting, records organization, and daily operational support.</p>
-        </div>
-
-        <div class="card">
-          <div class="card-icon">⚙️</div>
-          <h3>Recruitment Process Support</h3>
-          <p>Recruitment workflow documentation, process mapping, system requirements input, and coordination with development teams.</p>
-        </div>
-
-        <div class="card">
-          <div class="card-icon">📣</div>
-          <h3>Social Media Management</h3>
-          <p>Content preparation, social media posting, campaign coordination, inquiry handling, and performance monitoring.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="projects">
-    <div class="container">
-      <div class="section-heading">
-        <small>Selected work</small>
-        <h2>Featured Portfolio Projects</h2>
-        <p>Practical examples demonstrating my skills, tools, and working approach.</p>
-      </div>
-
-      <div class="projects-grid">
-        <article class="project">
-          <div class="project-top">📊</div>
-          <div class="project-content">
-            <h3>Healthcare Recruitment Candidate Tracker</h3>
-            <p>A sample recruitment tracking system designed to organize candidate records, monitor hiring stages, and display recruitment pipeline metrics.</p>
-            <span class="tag">Google Sheets</span>
-            <span class="tag">Dashboard</span>
-            <span class="tag">Recruitment</span>
-          </div>
-        </article>
-
-        <article class="project">
-          <div class="project-top">🔄</div>
-          <div class="project-content">
-            <h3>Recruitment Process Documentation</h3>
-            <p>A portfolio case study demonstrating how recruitment activities can be organized into clear workflows, process steps, and documentation.</p>
-            <span class="tag">Process Mapping</span>
-            <span class="tag">Documentation</span>
-            <span class="tag">Operations</span>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="skills" id="skills">
-    <div class="container">
-      <div class="section-heading">
-        <small>Tools & technologies</small>
-        <h2>Tools I Work With</h2>
-        <p>Technology that helps me organize work, communicate, and manage recruitment operations.</p>
-      </div>
-      <div class="skill-list">
-        <span class="skill">Google Workspace</span>
-        <span class="skill">Google Sheets</span>
-        <span class="skill">Zoho CRM</span>
-        <span class="skill">JotForm</span>
-        <span class="skill">Slack</span>
-        <span class="skill">ClickUp</span>
-        <span class="skill">Canva</span>
-        <span class="skill">Figma</span>
-        <span class="skill">Adobe Tools</span>
-        <span class="skill">ChatGPT</span>
-        <span class="skill">Claude</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact" id="contact">
-    <div class="container">
-      <div class="eyebrow">Have a project in mind?</div>
-      <h2>Let's work together.</h2>
-      <p>
-        Looking for recruitment, virtual assistance, or operations support?
-        Feel free to connect with me.
-      </p>
-      <a class="btn btn-orange"
-         href="https://github.com/bellenoradanunal">
-        Connect on GitHub →
-      </a>
-    </div>
-  </section>
-</main>
-
-<footer>
-  © 2026 Belle N. Nuñal · Recruitment & Virtual Operations Specialist
-</footer>
-
+  <footer>
+    © 2026 Belle N. Nuñal · Recruitment & Virtual Operations Specialist
+  </footer>
 </body>
 </html>
