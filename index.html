@@ -11,16 +11,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --navy: #344A62;
-      --blue: #52758A;
-      --rose: #C99A9B;
-      --cream: #F7F4EF;
-      --light: #F3F6F7;
-      --white: #FFFFFF;
-      --text: #263746;
-      --muted: #697984;
-      --line: #DFE6E8;
+:root {
+  /* Coastal Pastel Color Palette */
+  --deep-coastal-blue: #344A62;
+  --soft-sky-blue: #A9C7D8;
+  --rose-pink: #D98F9B;
+  --warm-cream: #F5F0EA;
+
+  /* Existing stylesheet compatibility */
+  --navy: var(--deep-coastal-blue);
+  --blue: var(--soft-sky-blue);
+  --rose: var(--rose-pink);
+  --orange: var(--rose-pink);
+  --cream: var(--warm-cream);
+  --light: var(--warm-cream);
+  --white: #FFFFFF;
+  --text: var(--deep-coastal-blue);
+  --muted: var(--deep-coastal-blue);
+  --line: var(--soft-sky-blue);
+}
+
     }
 
     * {
