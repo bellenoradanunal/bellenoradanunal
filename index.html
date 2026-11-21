@@ -1,0 +1,526 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belle N. Nuñal | Recruitment & Virtual Operations</title>
+  <meta name="description" content="Professional portfolio of Belle N. Nuñal, Recruitment and Virtual Operations Specialist.">
+  <style>
+    :root {
+      --deep costal blue: #344A62;
+      --rose: #E5AEB2;
+      --sky ble: #A9C7D8;
+      --dusty rose: #E5AEB2;
+      --text: #25334A;
+      --muted: #66758A;
+      --wwarm cream: #F5F0EA;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
+
+    header {
+      background: white;
+      border-bottom: 1px solid #E8EDF5;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 21px;
+      font-weight: 800;
+      color: var(--navy);
+    }
+
+    .logo span { color: var(--orange); }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover { color: var(--blue); }
+
+    .hero {
+      background: linear-gradient(125deg, #17365D, #205ED7);
+      color: white;
+      padding: 105px 0 95px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 360px;
+      height: 360px;
+      border: 65px solid rgba(255,255,255,.07);
+      border-radius: 50%;
+      right: -100px;
+      top: -110px;
+    }
+
+    .eyebrow {
+      color: #FFD08C;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 6vw, 64px);
+      line-height: 1.12;
+      max-width: 800px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span { color: #FFB454; }
+
+    .hero p {
+      color: #E0EAF9;
+      max-width: 650px;
+      font-size: 17px;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 7px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .btn-orange {
+      background: var(--orange);
+      color: var(--navy);
+    }
+
+    .btn-outline {
+      border: 1px solid white;
+      color: white;
+    }
+
+    section { padding: 80px 0; }
+
+    .section-heading {
+      margin-bottom: 35px;
+    }
+
+    .section-heading small {
+      color: var(--blue);
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .section-heading h2 {
+      color: var(--navy);
+      font-size: clamp(27px, 4vw, 36px);
+      margin: 7px 0;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      max-width: 650px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about-copy p { margin-bottom: 15px; }
+
+    .experience-card {
+      background: var(--light);
+      border-radius: 16px;
+      padding: 30px;
+      border-left: 5px solid var(--orange);
+    }
+
+    .experience-card strong {
+      font-size: 44px;
+      color: var(--blue);
+      display: block;
+      line-height: 1.2;
+    }
+
+    .experience-card span { color: var(--muted); }
+
+    .services { background: var(--light); }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #E7ECF4;
+      border-radius: 14px;
+      padding: 27px;
+      transition: .2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 28px rgba(23,54,93,.09);
+    }
+
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: #EAF1FF;
+      display: grid;
+      place-items: center;
+      font-size: 23px;
+      margin-bottom: 17px;
+    }
+
+    .card h3 {
+      color: var(--navy);
+      margin-bottom: 8px;
+      font-size: 19px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .project {
+      border: 1px solid #E5EAF2;
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .project-top {
+      min-height: 155px;
+      background: linear-gradient(135deg, #205ED7, #17365D);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 46px;
+    }
+
+    .project:nth-child(2) .project-top {
+      background: linear-gradient(135deg, #FE8E0A, #F5B64F);
+    }
+
+    .project-content { padding: 23px; }
+
+    .project-content h3 {
+      color: var(--navy);
+      margin-bottom: 9px;
+    }
+
+    .project-content p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #EDF3FF;
+      color: var(--blue);
+      border-radius: 30px;
+      padding: 5px 10px;
+      font-size: 11px;
+      font-weight: 700;
+      margin: 3px 3px 0 0;
+    }
+
+    .skills {
+      background: var(--light);
+    }
+
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .skill {
+      background: white;
+      border: 1px solid #E2E9F3;
+      border-radius: 8px;
+      padding: 10px 16px;
+      font-weight: 600;
+      color: var(--navy);
+      font-size: 14px;
+    }
+
+    .contact {
+      background: var(--navy);
+      color: white;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: clamp(28px, 4vw, 40px);
+      margin-bottom: 12px;
+    }
+
+    .contact p {
+      color: #D5E1F1;
+      max-width: 600px;
+      margin: 0 auto 25px;
+    }
+
+    footer {
+      background: #102947;
+      color: #D5E1F1;
+      text-align: center;
+      padding: 22px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 700px) {
+      .nav-links { gap: 12px; font-size: 12px; }
+      .logo { font-size: 17px; }
+      .hero { padding: 75px 0; }
+      .about-grid, .cards, .projects-grid {
+        grid-template-columns: 1fr;
+      }
+      section { padding: 60px 0; }
+    }
+
+    @media (max-width: 420px) {
+      nav { align-items: flex-start; flex-direction: column; padding: 15px 0; }
+      .nav-links { flex-wrap: wrap; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <a class="logo" href="#">BELLE N. <span>NUÑAL</span></a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <div class="eyebrow">Recruitment · Virtual Assistance · Operations</div>
+      <h1>Hi, I'm Belle. I help businesses build <span>better operations.</span></h1>
+      <p>
+        Recruitment & Virtual Operations Specialist with experience in
+        talent acquisition, administrative support, recruitment processes,
+        and remote business operations.
+      </p>
+      <div class="buttons">
+        <a class="btn btn-orange" href="#projects">Explore My Work →</a>
+        <a class="btn btn-outline" href="#contact">Let's Connect</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-copy">
+          <div class="section-heading">
+            <small>Get to know me</small>
+            <h2>Experience meets practical solutions.</h2>
+          </div>
+          <p>
+            I am a Recruitment & Virtual Operations Specialist with
+            experience supporting recruitment teams, overseas hiring,
+            administrative functions, and remote operations.
+          </p>
+          <p>
+            My work includes candidate sourcing and screening, recruitment
+            coordination, documentation, database management, reporting,
+            and process improvement.
+          </p>
+          <p>
+            I also contributed recruitment industry knowledge and process
+            documentation to a recruitment application project, working
+            alongside developers to help translate recruitment needs into
+            practical workflows.
+          </p>
+        </div>
+        <div class="experience-card">
+          <strong>10+</strong>
+          <span>Years of professional experience</span>
+          <hr style="border:0;border-top:1px solid #DCE5F1;margin:20px 0">
+          <strong>People + Process</strong>
+          <span>My approach to recruitment and operations support</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-heading">
+        <small>What I can do</small>
+        <h2>Services & Expertise</h2>
+        <p>Practical support for businesses, recruitment teams, and remote operations.</p>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon">👥</div>
+          <h3>Recruitment & Talent Acquisition</h3>
+          <p>Candidate sourcing, screening, interview coordination, hiring documentation, and onboarding support.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">📋</div>
+          <h3>Virtual Assistance & Administration</h3>
+          <p>Administrative coordination, data management, reporting, records organization, and daily operational support.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">⚙️</div>
+          <h3>Recruitment Process Support</h3>
+          <p>Recruitment workflow documentation, process mapping, system requirements input, and coordination with development teams.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">📣</div>
+          <h3>Social Media Management</h3>
+          <p>Content preparation, social media posting, campaign coordination, inquiry handling, and performance monitoring.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <div class="section-heading">
+        <small>Selected work</small>
+        <h2>Featured Portfolio Projects</h2>
+        <p>Practical examples demonstrating my skills, tools, and working approach.</p>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project">
+          <div class="project-top">📊</div>
+          <div class="project-content">
+            <h3>Healthcare Recruitment Candidate Tracker</h3>
+            <p>A sample recruitment tracking system designed to organize candidate records, monitor hiring stages, and display recruitment pipeline metrics.</p>
+            <span class="tag">Google Sheets</span>
+            <span class="tag">Dashboard</span>
+            <span class="tag">Recruitment</span>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-top">🔄</div>
+          <div class="project-content">
+            <h3>Recruitment Process Documentation</h3>
+            <p>A portfolio case study demonstrating how recruitment activities can be organized into clear workflows, process steps, and documentation.</p>
+            <span class="tag">Process Mapping</span>
+            <span class="tag">Documentation</span>
+            <span class="tag">Operations</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills" id="skills">
+    <div class="container">
+      <div class="section-heading">
+        <small>Tools & technologies</small>
+        <h2>Tools I Work With</h2>
+        <p>Technology that helps me organize work, communicate, and manage recruitment operations.</p>
+      </div>
+      <div class="skill-list">
+        <span class="skill">Google Workspace</span>
+        <span class="skill">Google Sheets</span>
+        <span class="skill">Zoho CRM</span>
+        <span class="skill">JotForm</span>
+        <span class="skill">Slack</span>
+        <span class="skill">ClickUp</span>
+        <span class="skill">Canva</span>
+        <span class="skill">Figma</span>
+        <span class="skill">Adobe Tools</span>
+        <span class="skill">ChatGPT</span>
+        <span class="skill">Claude</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="eyebrow">Have a project in mind?</div>
+      <h2>Let's work together.</h2>
+      <p>
+        Looking for recruitment, virtual assistance, or operations support?
+        Feel free to connect with me.
+      </p>
+      <a class="btn btn-orange"
+         href="https://github.com/bellenoradanunal">
+        Connect on GitHub →
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © 2026 Belle N. Nuñal · Recruitment & Virtual Operations Specialist
+</footer>
+
+</body>
+</html>
